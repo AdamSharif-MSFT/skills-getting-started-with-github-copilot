@@ -44,3 +44,7 @@ __pycache__/
 # Azure Developer CLI
 .azure/
 *.env
+
+# Bicep compiled files
+*.json
+!infra/main.parameters.json
