@@ -105,7 +105,6 @@ module aiFoundry './core/aiFoundry.bicep' = {
     hubName: aiHubName
     location: location
     tags: tags
-    workspaceId: logAnalytics.outputs.id
     applicationInsightsId: applicationInsights.outputs.id
   }
 }

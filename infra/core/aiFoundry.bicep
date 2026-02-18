@@ -8,9 +8,6 @@ param location string = resourceGroup().location
 @description('Tags for AI resources')
 param tags object = {}
 
-@description('Log Analytics Workspace ID')
-param workspaceId string
-
 @description('Application Insights ID')
 param applicationInsightsId string
 
@@ -22,7 +19,7 @@ param keyVaultId string = ''
 
 // Storage Account for AI Hub (if not provided)
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = if (empty(storageAccountId)) {
-  name: '${replace(hubName, '-', '')}st'
+  name: take('${replace(hubName, '-', '')}stor', 24)
   location: location
   tags: tags
   sku: {
