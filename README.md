@@ -1,5 +1,106 @@
 <div align="center">
 
+# ZavaStorefront Web Application
+
+A FastAPI-based web application (Mergington High School Activities API) with Azure cloud infrastructure provisioning.
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/)
+
+</div>
+
+## 📋 Overview
+
+This repository contains a FastAPI application for managing high school extracurricular activities, along with complete Azure infrastructure as code (IaC) for deployment to the cloud.
+
+## 🚀 Quick Deploy to Azure
+
+Deploy the application to Azure with a single command:
+
+```bash
+azd up
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+### What Gets Deployed
+
+- **Linux App Service** with Docker container support
+- **Azure Container Registry** for Docker images (RBAC-authenticated)
+- **Application Insights** for monitoring and telemetry
+- **Azure AI Services** for GPT-4 and Phi model access
+- **Log Analytics** workspace for centralized logging
+
+All resources are deployed to **westus3** in a single resource group for the dev environment.
+
+## 💻 Local Development
+
+### Prerequisites
+
+- Python 3.11 or higher
+- pip
+
+### Running Locally
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the application:
+   ```bash
+   cd src
+   uvicorn app:app --reload
+   ```
+
+3. Access the application:
+   - Web UI: http://localhost:8000
+   - API Documentation: http://localhost:8000/docs
+   - Alternative docs: http://localhost:8000/redoc
+
+## 📚 Documentation
+
+- [Deployment Guide](DEPLOYMENT.md) - Complete Azure deployment guide
+- [Infrastructure Details](infra/README.md) - Bicep templates and architecture
+- [API Documentation](src/README.md) - API endpoints and usage
+
+## 🏗️ Project Structure
+
+```
+.
+├── src/                    # Application source code
+│   ├── app.py             # FastAPI application
+│   └── static/            # Static web assets
+├── infra/                 # Azure infrastructure (Bicep)
+│   ├── main.bicep         # Main infrastructure template
+│   ├── core/              # Reusable Bicep modules
+│   └── README.md          # Infrastructure documentation
+├── tests/                 # Test files
+├── Dockerfile             # Container definition
+├── azure.yaml             # Azure Developer CLI configuration
+├── DEPLOYMENT.md          # Deployment guide
+└── requirements.txt       # Python dependencies
+```
+
+## 🔧 Technology Stack
+
+- **Backend**: FastAPI (Python)
+- **Deployment**: Docker, Azure App Service
+- **Infrastructure**: Bicep, Azure Developer CLI
+- **Monitoring**: Application Insights, Log Analytics
+- **AI/ML**: Azure AI Services
+
+## 🔐 Security Features
+
+- Managed Identity for Azure resource access
+- RBAC-based Container Registry authentication (no passwords)
+- HTTPS-only enforcement
+- TLS 1.2+ minimum version
+- Secrets managed by Azure Key Vault (optional)
+
+---
+
+<div align="center">
+
 # 🎉 Congratulations AdamSharif-MSFT! 🎉
 
 <img src="https://octodex.github.com/images/welcometocat.png" height="200px" />

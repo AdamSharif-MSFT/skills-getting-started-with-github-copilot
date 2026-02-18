@@ -37,9 +37,9 @@ param imageName string = 'zavastorefrontapp:latest'
 var abbrs = loadJsonContent('./abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
 var tags = {
-  'azd-env-name': environmentName
-  'environment': 'dev'
-  'application': 'ZavaStorefront'
+  azdEnvName: environmentName
+  environment: 'dev'
+  application: 'ZavaStorefront'
 }
 
 // Resource Group
