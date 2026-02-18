@@ -1,0 +1,48 @@
+# Git files
+.git
+.gitignore
+
+# Azure files
+.azure
+*.env
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# IDEs
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache
+.coverage
+htmlcov
+
+# Documentation
+*.md
+LICENSE
+
+# CI/CD
+.github
+
+# Infrastructure
+infra
+
+# Tests
+tests
