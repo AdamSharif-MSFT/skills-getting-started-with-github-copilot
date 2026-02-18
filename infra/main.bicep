@@ -93,7 +93,7 @@ module acrRoleAssignment './core/acrRoleAssignment.bicep' = {
   scope: resourceGroup
   params: {
     principalId: appService.outputs.webAppPrincipalId
-    containerRegistryId: containerRegistry.outputs.id
+    containerRegistryName: containerRegistry.outputs.name
   }
 }
 

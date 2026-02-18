@@ -45,6 +45,6 @@ __pycache__/
 .azure/
 *.env
 
-# Bicep compiled files
-*.json
+# Bicep compiled ARM templates
+infra/**/*.json
 !infra/main.parameters.json

@@ -19,7 +19,7 @@ param keyVaultId string = ''
 
 // Storage Account for AI Hub (if not provided)
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = if (empty(storageAccountId)) {
-  name: take('${replace(hubName, '-', '')}stor', 24)
+  name: take('${replace(hubName, '-', '')}aihub', 24)
   location: location
   tags: tags
   sku: {
